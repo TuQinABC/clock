@@ -1,0 +1,29 @@
+<div class="clock">
+  <div class="analog-clock">
+    <div class="hour hand" #hourHand></div>
+    <div class="minute hand" #minuteHand></div>
+    <div class="second hand" #secondHand></div>
+    <div class="center-circle"></div>
+  </div>
+  <div class="digital-clock">{{hour | async}}:{{minute | async}}:{{second | async}}</div>
+  <div class="clock-setting-container">
+    <div class="setting">
+      <div class="button" (click)="increaseHour()">+</div>
+      {{hour | async}}
+      <div class="button" (click)="decreaseHour()">-</div>
+    </div>
+    <div class="setting">
+
+      <div class="button" (click)="increaseMin()">+</div>
+      {{minute | async}}
+      <div class="button" (click)="decreaseMin()">-</div>
+    </div>
+    <div class="setting">
+
+      <div class="button" (click)="increaseSec()">+</div>
+      {{second | async}}
+      <div class="button" (click)="decreaseSec()">-</div>
+    </div>
+
+  </div>
+</div>
