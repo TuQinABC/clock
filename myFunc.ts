@@ -1,3 +1,3 @@
 export = ()-{}
 
-export = a;
+ccccexport = a;
